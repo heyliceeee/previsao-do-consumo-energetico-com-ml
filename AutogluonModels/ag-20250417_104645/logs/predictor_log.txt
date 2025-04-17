@@ -114,3 +114,5 @@ Model not specified in predict, will default to the model with the best validati
 Model not specified in predict, will default to the model with the best validation score: WeightedEnsemble
 Model not specified in predict, will default to the model with the best validation score: WeightedEnsemble
 Model not specified in predict, will default to the model with the best validation score: WeightedEnsemble
+Loading predictor from path D:\githubProjects\previsao-do-consumo-energetico-com-ml\AutogluonModels\ag-20250417_102052
+Model not specified in predict, will default to the model with the best validation score: WeightedEnsemble

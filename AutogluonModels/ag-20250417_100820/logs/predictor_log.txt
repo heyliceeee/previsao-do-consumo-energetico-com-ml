@@ -1,0 +1,228 @@
+Frequency 'H' stored as 'h'
+Frequency 'H' stored as 'h'
+Beginning AutoGluon training...
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\AutogluonModels\ag-20250417_102052'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.9
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          12
+GPU Count:          0
+Memory Avail:       3.82 GB / 15.93 GB (24.0%)
+Disk Space Avail:   717.56 GB / 931.46 GB (77.0%)
+===================================================
+Setting presets to: high_quality
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'h',
+ 'hyperparameters': 'default',
+ 'known_covariates_names': ['Hour',
+                            'DayOfTheWeek',
+                            'IsWeekend',
+                            'TimeOfDay',
+                            'Season',
+                            'Temperature',
+                            'PopulationDensity'],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'verbosity': 2}
+
+Provided train_data has 7992 rows, 1 time series. Median time series length is 7992 (min=7992, max=7992). 
+
+Provided data contains following columns:
+	target: 'target'
+	known_covariates:
+		categorical:        ['DayOfTheWeek', 'TimeOfDay', 'Season']
+		continuous (float): ['Hour', 'IsWeekend', 'Temperature', 'PopulationDensity']
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-04-17 11:20:52
+Models that will be trained: ['SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'NPTS', 'DynamicOptimizedTheta', 'AutoETS', 'ChronosZeroShot[bolt_base]', 'ChronosFineTuned[bolt_small]', 'TemporalFusionTransformer', 'DeepAR', 'PatchTST', 'TiDE']
+Training timeseries model SeasonalNaive. 
+	-0.2992       = Validation score (-WQL)
+	0.02    s     = Training runtime
+	1.77    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. 
+	-0.3290       = Validation score (-WQL)
+	2.76    s     = Training runtime
+	1.04    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. 
+	-0.2141       = Validation score (-WQL)
+	77.53   s     = Training runtime
+	0.62    s     = Validation (prediction) runtime
+Training timeseries model NPTS. 
+	-0.3168       = Validation score (-WQL)
+	0.02    s     = Training runtime
+	1.65    s     = Validation (prediction) runtime
+Training timeseries model DynamicOptimizedTheta. 
+	-0.4278       = Validation score (-WQL)
+	0.02    s     = Training runtime
+	23.50   s     = Validation (prediction) runtime
+Training timeseries model AutoETS. 
+	-0.4061       = Validation score (-WQL)
+	0.02    s     = Training runtime
+	5.66    s     = Validation (prediction) runtime
+Training timeseries model ChronosZeroShot[bolt_base]. 
+	-0.2267       = Validation score (-WQL)
+	2.02    s     = Training runtime
+	9.20    s     = Validation (prediction) runtime
+Training timeseries model ChronosFineTuned[bolt_small]. 
+	Fine-tuning on the CPU detected. We recommend using a GPU for faster fine-tuning of Chronos.
+	Warning: Exception caused ChronosFineTuned[bolt_small] to fail during training... Skipping this model.
+	TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+Training timeseries model TemporalFusionTransformer. 
+	-0.2007       = Validation score (-WQL)
+	217.09  s     = Training runtime
+	0.03    s     = Validation (prediction) runtime
+Training timeseries model DeepAR. 
+	-0.1820       = Validation score (-WQL)
+	63.03   s     = Training runtime
+	0.12    s     = Validation (prediction) runtime
+Training timeseries model PatchTST. 
+	-0.2099       = Validation score (-WQL)
+	42.23   s     = Training runtime
+	0.03    s     = Validation (prediction) runtime
+Training timeseries model TiDE. 
+	-0.1897       = Validation score (-WQL)
+	152.61  s     = Training runtime
+	0.03    s     = Validation (prediction) runtime
+Fitting simple weighted ensemble.
+	Ensemble weights: {'DeepAR': 0.85, 'DynamicOptimizedTheta': 0.13, 'TiDE': 0.02}
+	-0.1642       = Validation score (-WQL)
+	0.74    s     = Training runtime
+	23.65   s     = Validation (prediction) runtime
+Training complete. Models trained: ['SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'NPTS', 'DynamicOptimizedTheta', 'AutoETS', 'ChronosZeroShot[bolt_base]', 'TemporalFusionTransformer', 'DeepAR', 'PatchTST', 'TiDE', 'WeightedEnsemble']
+Total runtime: 617.41 s
+Best model: WeightedEnsemble
+Best model score: -0.1642
+Frequency 'H' stored as 'h'
+Beginning AutoGluon training...
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\AutogluonModels\ag-20250417_104645'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.9
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          12
+GPU Count:          0
+Memory Avail:       4.00 GB / 15.93 GB (25.1%)
+Disk Space Avail:   717.47 GB / 931.46 GB (77.0%)
+===================================================
+Setting presets to: high_quality
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'h',
+ 'hyperparameters': 'default',
+ 'known_covariates_names': ['Hour',
+                            'DayOfTheWeek',
+                            'IsWeekend',
+                            'TimeOfDay',
+                            'Season',
+                            'Temperature',
+                            'PopulationDensity'],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'verbosity': 2}
+
+Provided train_data has 7992 rows, 1 time series. Median time series length is 7992 (min=7992, max=7992). 
+
+Provided data contains following columns:
+	target: 'target'
+	known_covariates:
+		categorical:        ['DayOfTheWeek', 'TimeOfDay', 'Season']
+		continuous (float): ['Hour', 'IsWeekend', 'Temperature', 'PopulationDensity']
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-04-17 11:46:45
+Models that will be trained: ['SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'NPTS', 'DynamicOptimizedTheta', 'AutoETS', 'ChronosZeroShot[bolt_base]', 'ChronosFineTuned[bolt_small]', 'TemporalFusionTransformer', 'DeepAR', 'PatchTST', 'TiDE']
+Training timeseries model SeasonalNaive. 
+	-0.2992       = Validation score (-WQL)
+	0.02    s     = Training runtime
+	2.67    s     = Validation (prediction) runtime
+Training timeseries model RecursiveTabular. 
+	-0.3290       = Validation score (-WQL)
+	2.78    s     = Training runtime
+	1.03    s     = Validation (prediction) runtime
+Training timeseries model DirectTabular. 
+	-0.2141       = Validation score (-WQL)
+	83.17   s     = Training runtime
+	0.67    s     = Validation (prediction) runtime
+Training timeseries model NPTS. 
+	-0.3208       = Validation score (-WQL)
+	0.02    s     = Training runtime
+	1.62    s     = Validation (prediction) runtime
+Training timeseries model DynamicOptimizedTheta. 
+	-0.4278       = Validation score (-WQL)
+	0.02    s     = Training runtime
+	19.49   s     = Validation (prediction) runtime
+Training timeseries model AutoETS. 
+	-0.4061       = Validation score (-WQL)
+	0.02    s     = Training runtime
+	5.64    s     = Validation (prediction) runtime
+Training timeseries model ChronosZeroShot[bolt_base]. 
+	-0.2267       = Validation score (-WQL)
+	0.02    s     = Training runtime
+	2.49    s     = Validation (prediction) runtime
+Training timeseries model ChronosFineTuned[bolt_small]. 
+	Fine-tuning on the CPU detected. We recommend using a GPU for faster fine-tuning of Chronos.
+	Warning: Exception caused ChronosFineTuned[bolt_small] to fail during training... Skipping this model.
+	TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+Training timeseries model TemporalFusionTransformer. 
+	-0.2007       = Validation score (-WQL)
+	232.19  s     = Training runtime
+	0.04    s     = Validation (prediction) runtime
+Training timeseries model DeepAR. 
+	Warning: Exception caused DeepAR to fail during training... Skipping this model.
+	name 'exit' is not defined
+Training timeseries model PatchTST. 
+	Warning: Exception caused PatchTST to fail during training... Skipping this model.
+	name 'exit' is not defined
+Training timeseries model TiDE. 
+	Warning: Exception caused TiDE to fail during training... Skipping this model.
+	name 'exit' is not defined
+Fitting simple weighted ensemble.
+	Ensemble weights: {'DynamicOptimizedTheta': 0.11, 'TemporalFusionTransformer': 0.89}
+	-0.1887       = Validation score (-WQL)
+	0.59    s     = Training runtime
+	19.53   s     = Validation (prediction) runtime
+Training complete. Models trained: ['SeasonalNaive', 'RecursiveTabular', 'DirectTabular', 'NPTS', 'DynamicOptimizedTheta', 'AutoETS', 'ChronosZeroShot[bolt_base]', 'TemporalFusionTransformer', 'WeightedEnsemble']
+Total runtime: 583.47 s
+Best model: WeightedEnsemble
+Best model score: -0.1887
+Loading predictor from path D:\githubProjects\previsao-do-consumo-energetico-com-ml\AutogluonModels\ag-20250417_102052
+Loading predictor from path D:\githubProjects\previsao-do-consumo-energetico-com-ml\AutogluonModels\ag-20250417_102052
+Model not specified in predict, will default to the model with the best validation score: WeightedEnsemble
+Model not specified in predict, will default to the model with the best validation score: WeightedEnsemble
+Model not specified in predict, will default to the model with the best validation score: WeightedEnsemble
+Model not specified in predict, will default to the model with the best validation score: WeightedEnsemble
+Model not specified in predict, will default to the model with the best validation score: WeightedEnsemble
+Model not specified in predict, will default to the model with the best validation score: WeightedEnsemble

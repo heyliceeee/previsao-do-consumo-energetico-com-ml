@@ -1,3 +1,4 @@
 /datasets/datasetsPorCP
-/predicts/ARIMA/modelo_ARIMA_chronos-t5-large_334d_cp2840_float32_auto.pth
+/AutogluonModels
 /datasets/consumo_eredes_normalizado.parquet
+/predicts/ARIMA/modelo_ARIMA_chronos-t5-large_334d_cp2840_float32_auto.pth

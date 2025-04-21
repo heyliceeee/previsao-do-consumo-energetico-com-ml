@@ -1,0 +1,402 @@
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\AutogluonModels\ag-20250421_104720'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.9
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          12
+GPU Count:          0
+Memory Avail:       3.61 GB / 15.93 GB (22.7%)
+Disk Space Avail:   717.14 GB / 931.46 GB (77.0%)
+===================================================
+Setting presets to: medium_quality
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'h',
+ 'hyperparameters': {'ARIMAModel': {'target_scaler': 'standard'}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'EnergyNormalized',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+Provided train_data has 7992 rows, 1 time series. Median time series length is 7992 (min=7992, max=7992). 
+Provided tuning_data has 8016 rows, 1 time series. Median time series length is 8016 (min=8016, max=8016). 
+	Setting num_val_windows = 0 (disabling backtesting on train_data) because tuning_data is provided.
+
+Provided data contains following columns:
+	target: 'EnergyNormalized'
+	past_covariates:
+		categorical:        ['TimeOfDay', 'DayOfTheWeek', 'Season']
+		continuous (float): ['Hour', 'ActiveEnergy(kWh)', 'Day', 'Month', 'Year', 'IsWeekend', ...]
+	static_features:
+		categorical:        []
+		continuous (float): ['PopulationDensity']
+
+AutoGluon will ignore following non-numeric/non-informative columns:
+	ignored covariates:      ['Date']
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-04-21 11:47:21
+Models that will be trained: ['ARIMA']
+Training timeseries model ARIMA. Training for up to 300.0s of the 300.0s of remaining time.
+	Time limit exceeded... Skipping ARIMA.
+Not fitting ensemble as no models were successfully trained.
+Training complete. Models trained: []
+Total runtime: 0.19 s
+Trainer has no fit models that can predict.
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\AutogluonModels\ag-20250421_104905'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.9
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          12
+GPU Count:          0
+Memory Avail:       3.20 GB / 15.93 GB (20.1%)
+Disk Space Avail:   717.14 GB / 931.46 GB (77.0%)
+===================================================
+Setting presets to: medium_quality
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'h',
+ 'hyperparameters': {'ARIMAModel': {'order': (1, 1, 1),
+                                    'seasonal_order': (1, 0, 1, 24),
+                                    'target_scaler': 'standard'}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': True,
+ 'target': 'EnergyNormalized',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+Provided train_data has 7992 rows, 1 time series. Median time series length is 7992 (min=7992, max=7992). 
+Provided tuning_data has 8016 rows, 1 time series. Median time series length is 8016 (min=8016, max=8016). 
+	Setting num_val_windows = 0 (disabling backtesting on train_data) because tuning_data is provided.
+
+Provided data contains following columns:
+	target: 'EnergyNormalized'
+	past_covariates:
+		categorical:        ['TimeOfDay', 'DayOfTheWeek', 'Season']
+		continuous (float): ['Hour', 'ActiveEnergy(kWh)', 'Day', 'Month', 'Year', 'IsWeekend', ...]
+	static_features:
+		categorical:        []
+		continuous (float): ['PopulationDensity']
+
+AutoGluon will ignore following non-numeric/non-informative columns:
+	ignored covariates:      ['Date']
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-04-21 11:49:05
+Models that will be trained: ['ARIMA']
+Training timeseries model ARIMA. Training for up to 300.0s of the 300.0s of remaining time.
+	0.01    s     = Training runtime
+Training complete. Models trained: ['ARIMA']
+Total runtime: 0.02 s
+Best model: ARIMA
+Model not specified in predict, will default to the model with the best validation score: ARIMA
+	Warning: ARIMA failed for 1 time series (100.0%). Fallback model SeasonalNaive was used for these time series.
+Model not specified in predict, will default to the model with the best validation score: ARIMA
+	Warning: ARIMA failed for 1 time series (100.0%). Fallback model SeasonalNaive was used for these time series.
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\AutogluonModels\ag-20250421_105022'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.9
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          12
+GPU Count:          0
+Memory Avail:       2.65 GB / 15.93 GB (16.7%)
+Disk Space Avail:   717.14 GB / 931.46 GB (77.0%)
+===================================================
+Setting presets to: medium_quality
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'h',
+ 'hyperparameters': {'ARIMAModel': {'order': (1, 1, 1),
+                                    'seasonal_order': (1, 0, 1, 24),
+                                    'target_scaler': 'standard'}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': True,
+ 'target': 'EnergyNormalized',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+Provided train_data has 7992 rows, 1 time series. Median time series length is 7992 (min=7992, max=7992). 
+Provided tuning_data has 8016 rows, 1 time series. Median time series length is 8016 (min=8016, max=8016). 
+	Setting num_val_windows = 0 (disabling backtesting on train_data) because tuning_data is provided.
+
+Provided data contains following columns:
+	target: 'EnergyNormalized'
+	past_covariates:
+		categorical:        ['TimeOfDay', 'DayOfTheWeek', 'Season']
+		continuous (float): ['Hour', 'ActiveEnergy(kWh)', 'Day', 'Month', 'Year', 'IsWeekend', ...]
+	static_features:
+		categorical:        []
+		continuous (float): ['PopulationDensity']
+
+AutoGluon will ignore following non-numeric/non-informative columns:
+	ignored covariates:      ['Date']
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-04-21 11:50:22
+Models that will be trained: ['ARIMA']
+Training timeseries model ARIMA. Training for up to 300.0s of the 300.0s of remaining time.
+	0.02    s     = Training runtime
+Training complete. Models trained: ['ARIMA']
+Total runtime: 0.02 s
+Best model: ARIMA
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\AutogluonModels\ag-20250421_105027'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.9
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          12
+GPU Count:          0
+Memory Avail:       2.52 GB / 15.93 GB (15.8%)
+Disk Space Avail:   717.14 GB / 931.46 GB (77.0%)
+===================================================
+Setting presets to: medium_quality
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'h',
+ 'hyperparameters': {'ARIMAModel': {'order': (1, 1, 1),
+                                    'seasonal_order': (1, 0, 1, 24),
+                                    'target_scaler': 'standard'}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': True,
+ 'target': 'EnergyNormalized',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+Provided train_data has 7992 rows, 1 time series. Median time series length is 7992 (min=7992, max=7992). 
+Provided tuning_data has 8016 rows, 1 time series. Median time series length is 8016 (min=8016, max=8016). 
+	Setting num_val_windows = 0 (disabling backtesting on train_data) because tuning_data is provided.
+
+Provided data contains following columns:
+	target: 'EnergyNormalized'
+	past_covariates:
+		categorical:        ['TimeOfDay', 'DayOfTheWeek', 'Season']
+		continuous (float): ['Hour', 'ActiveEnergy(kWh)', 'Day', 'Month', 'Year', 'IsWeekend', ...]
+	static_features:
+		categorical:        []
+		continuous (float): ['PopulationDensity']
+
+AutoGluon will ignore following non-numeric/non-informative columns:
+	ignored covariates:      ['Date']
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-04-21 11:50:27
+Models that will be trained: ['ARIMA']
+Training timeseries model ARIMA. Training for up to 300.0s of the 300.0s of remaining time.
+	0.01    s     = Training runtime
+Training complete. Models trained: ['ARIMA']
+Total runtime: 0.02 s
+Best model: ARIMA
+Model not specified in predict, will default to the model with the best validation score: ARIMA
+	Warning: ARIMA failed for 1 time series (100.0%). Fallback model SeasonalNaive was used for these time series.
+Model not specified in predict, will default to the model with the best validation score: ARIMA
+	Warning: ARIMA failed for 1 time series (100.0%). Fallback model SeasonalNaive was used for these time series.
+Model not specified in predict, will default to the model with the best validation score: ARIMA
+Model not specified in predict, will default to the model with the best validation score: ARIMA
+Model not specified in predict, will default to the model with the best validation score: ARIMA
+Model not specified in predict, will default to the model with the best validation score: ARIMA
+Model not specified in predict, will default to the model with the best validation score: ARIMA
+Model not specified in predict, will default to the model with the best validation score: ARIMA
+Model not specified in predict, will default to the model with the best validation score: ARIMA
+Model not specified in predict, will default to the model with the best validation score: ARIMA
+Model not specified in predict, will default to the model with the best validation score: ARIMA
+Model not specified in predict, will default to the model with the best validation score: ARIMA
+Model not specified in predict, will default to the model with the best validation score: ARIMA
+Model not specified in predict, will default to the model with the best validation score: ARIMA
+Model not specified in predict, will default to the model with the best validation score: ARIMA
+Model not specified in predict, will default to the model with the best validation score: ARIMA
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\AutogluonModels\ag-20250421_113032'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.9
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          12
+GPU Count:          0
+Memory Avail:       3.85 GB / 15.93 GB (24.2%)
+Disk Space Avail:   717.14 GB / 931.46 GB (77.0%)
+===================================================
+Setting presets to: medium_quality
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'h',
+ 'hyperparameters': {'ARIMAModel': {'order': (1, 1, 1),
+                                    'seasonal_order': (1, 0, 1, 24),
+                                    'target_scaler': 'standard'}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': True,
+ 'target': 'EnergyNormalized',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+Provided train_data has 7992 rows, 1 time series. Median time series length is 7992 (min=7992, max=7992). 
+Provided tuning_data has 8016 rows, 1 time series. Median time series length is 8016 (min=8016, max=8016). 
+	Setting num_val_windows = 0 (disabling backtesting on train_data) because tuning_data is provided.
+
+Provided data contains following columns:
+	target: 'EnergyNormalized'
+	past_covariates:
+		categorical:        ['TimeOfDay', 'DayOfTheWeek', 'Season']
+		continuous (float): ['Hour', 'ActiveEnergy(kWh)', 'Day', 'Month', 'Year', 'IsWeekend', ...]
+	static_features:
+		categorical:        []
+		continuous (float): ['PopulationDensity']
+
+AutoGluon will ignore following non-numeric/non-informative columns:
+	ignored covariates:      ['Date']
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-04-21 12:30:32
+Models that will be trained: ['ARIMA']
+Training timeseries model ARIMA. Training for up to 300.0s of the 300.0s of remaining time.
+	0.01    s     = Training runtime
+Training complete. Models trained: ['ARIMA']
+Total runtime: 0.02 s
+Best model: ARIMA
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\ARIMA\modelo'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.9
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          12
+GPU Count:          0
+Memory Avail:       3.91 GB / 15.93 GB (24.6%)
+Disk Space Avail:   719.78 GB / 931.46 GB (77.3%)
+===================================================
+Setting presets to: medium_quality
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'h',
+ 'hyperparameters': {'ARIMAModel': {'order': (1, 1, 1),
+                                    'seasonal_order': (1, 0, 1, 24),
+                                    'target_scaler': 'standard'}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': True,
+ 'target': 'EnergyNormalized',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+Provided train_data has 7992 rows, 1 time series. Median time series length is 7992 (min=7992, max=7992). 
+Provided tuning_data has 8016 rows, 1 time series. Median time series length is 8016 (min=8016, max=8016). 
+	Setting num_val_windows = 0 (disabling backtesting on train_data) because tuning_data is provided.
+
+Provided data contains following columns:
+	target: 'EnergyNormalized'
+	past_covariates:
+		categorical:        ['TimeOfDay', 'DayOfTheWeek', 'Season']
+		continuous (float): ['Hour', 'ActiveEnergy(kWh)', 'Day', 'Month', 'Year', 'IsWeekend', ...]
+	static_features:
+		categorical:        []
+		continuous (float): ['PopulationDensity']
+
+AutoGluon will ignore following non-numeric/non-informative columns:
+	ignored covariates:      ['Date']
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-04-21 12:31:40
+Models that will be trained: ['ARIMA']
+Training timeseries model ARIMA. Training for up to 300.0s of the 300.0s of remaining time.
+	0.01    s     = Training runtime
+Training complete. Models trained: ['ARIMA']
+Total runtime: 0.02 s
+Best model: ARIMA
+Model not specified in predict, will default to the model with the best validation score: ARIMA
+	Warning: ARIMA failed for 1 time series (100.0%). Fallback model SeasonalNaive was used for these time series.
+Model not specified in predict, will default to the model with the best validation score: ARIMA

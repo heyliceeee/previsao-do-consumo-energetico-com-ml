@@ -64,3 +64,4 @@ Best model: ARIMA
 Model not specified in predict, will default to the model with the best validation score: ARIMA
 	Warning: ARIMA failed for 1 time series (100.0%). Fallback model SeasonalNaive was used for these time series.
 Model not specified in predict, will default to the model with the best validation score: ARIMA
+Model not specified in predict, will default to the model with the best validation score: ARIMA

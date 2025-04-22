@@ -1,0 +1,217 @@
+Beginning AutoGluon training... Time limit = 300s
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\linearRegression\modelo'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.9
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          12
+GPU Count:          0
+Memory Avail:       3.06 GB / 15.93 GB (19.2%)
+Disk Space Avail:   702.88 GB / 931.46 GB (75.5%)
+===================================================
+Setting presets to: medium_quality
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'h',
+ 'hyperparameters': {'LinearRegressionModel': {'target_scaler': 'standard'}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'EnergyNormalized',
+ 'time_limit': 300,
+ 'verbosity': 2}
+
+Provided train_data has 7992 rows, 1 time series. Median time series length is 7992 (min=7992, max=7992). 
+Provided tuning_data has 8016 rows, 1 time series. Median time series length is 8016 (min=8016, max=8016). 
+	Setting num_val_windows = 0 (disabling backtesting on train_data) because tuning_data is provided.
+
+Provided data contains following columns:
+	target: 'EnergyNormalized'
+	past_covariates:
+		categorical:        ['TimeOfDay', 'DayOfTheWeek', 'Season']
+		continuous (float): ['Hour', 'ActiveEnergy(kWh)', 'Day', 'Month', 'Year', 'IsWeekend', ...]
+	static_features:
+		categorical:        []
+		continuous (float): ['PopulationDensity']
+
+AutoGluon will ignore following non-numeric/non-informative columns:
+	ignored covariates:      ['Date']
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-04-22 10:38:27
+Warning: path already exists! This predictor may overwrite an existing predictor! path="predicts/linearRegression/modelo"
+Preset alias specified: 'medium' maps to 'medium_quality'.
+Verbosity: 2 (Standard Logging)
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.9
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          12
+Memory Avail:       2.87 GB / 15.93 GB (18.0%)
+Disk Space Avail:   702.88 GB / 931.46 GB (75.5%)
+===================================================
+Presets specified: ['medium']
+Beginning AutoGluon training ... Time limit = 300s
+AutoGluon will save models to "D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\linearRegression\modelo"
+Train Data Rows:    7992
+Train Data Columns: 11
+Tuning Data Rows:    24
+Tuning Data Columns: 11
+Label Column:       EnergyNormalized
+AutoGluon infers your prediction problem is: 'regression' (because dtype of label-column == float and many unique label-values observed).
+	Label info (max, min, mean, stddev): (0.1517218738549846, 0.005890280091559903, 0.06812, 0.02939)
+	If 'regression' is not the correct problem_type, please manually specify the problem_type parameter during Predictor init (You may specify problem_type as one of: ['binary', 'multiclass', 'regression', 'quantile'])
+Problem Type:       regression
+Preprocessing data ...
+Using Feature Generators to preprocess the data ...
+Fitting AutoMLPipelineFeatureGenerator...
+	Available Memory:                    2939.16 MB
+	Train Data (Original)  Memory Usage: 1.84 MB (0.1% of available memory)
+	Inferring data type of each feature based on column values. Set feature_metadata_in to manually specify special dtypes of the features.
+	Stage 1 Generators:
+		Fitting AsTypeFeatureGenerator...
+			Note: Converting 3 features to boolean dtype as they only contain 2 unique values.
+	Stage 2 Generators:
+		Fitting FillNaFeatureGenerator...
+	Stage 3 Generators:
+		Fitting IdentityFeatureGenerator...
+		Fitting CategoryFeatureGenerator...
+			Fitting CategoryMemoryMinimizeFeatureGenerator...
+	Stage 4 Generators:
+		Fitting DropUniqueFeatureGenerator...
+	Stage 5 Generators:
+		Fitting DropDuplicatesFeatureGenerator...
+	Useless Original Features (Count: 1): ['PopulationDensity']
+		These features carry no predictive signal and should be manually investigated.
+		This is typically a feature which has the same value for all rows.
+		These features do not need to be present at inference time.
+	Types of features in original data (raw dtype, special dtypes):
+		('float', [])  : 1 | ['Temperature']
+		('int', [])    : 6 | ['Hour', 'Day', 'Month', 'Year', 'IsWeekend', ...]
+		('object', []) : 3 | ['TimeOfDay', 'DayOfTheWeek', 'Season']
+	Types of features in processed data (raw dtype, special dtypes):
+		('category', [])  : 3 | ['TimeOfDay', 'DayOfTheWeek', 'Season']
+		('float', [])     : 1 | ['Temperature']
+		('int', [])       : 3 | ['Hour', 'Day', 'Month']
+		('int', ['bool']) : 3 | ['Year', 'IsWeekend', 'IsHoliday']
+	0.1s = Fit runtime
+	10 features in original data used to generate 10 features in processed data.
+	Train Data (Processed) Memory Usage: 0.20 MB (0.0% of available memory)
+Data preprocessing and feature engineering runtime = 0.08s ...
+AutoGluon will gauge predictive performance using evaluation metric: 'mean_absolute_error'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+	To change this, specify the eval_metric parameter of Predictor()
+User-specified model hyperparameters to be fit:
+{
+	'LR': [{}],
+}
+Fitting 1 L1 models, fit_strategy="sequential" ...
+Fitting model: LinearModel ... Training model for up to 299.92s of the 299.91s of remaining time.
+	-0.0128	 = Validation score   (-mean_absolute_error)
+	0.04s	 = Training   runtime
+	0.0s	 = Validation runtime
+Fitting model: WeightedEnsemble_L2 ... Training model for up to 299.92s of the 299.86s of remaining time.
+	Ensemble Weights: {'LinearModel': 1.0}
+	-0.0128	 = Validation score   (-mean_absolute_error)
+	0.01s	 = Training   runtime
+	0.0s	 = Validation runtime
+AutoGluon training complete, total runtime = 0.17s ... Best model: WeightedEnsemble_L2 | Estimated inference throughput: 5315.1 rows/s (24 batch size)
+TabularPredictor saved. To load, use: predictor = TabularPredictor.load("D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\linearRegression\modelo")
+TabularPredictor saved. To load, use: predictor = TabularPredictor.load("D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\linearRegression\modelo")
+Warning: path already exists! This predictor may overwrite an existing predictor! path="predicts/linearRegression/modelo"
+Preset alias specified: 'medium' maps to 'medium_quality'.
+Verbosity: 2 (Standard Logging)
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.9
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          12
+Memory Avail:       2.55 GB / 15.93 GB (16.0%)
+Disk Space Avail:   702.88 GB / 931.46 GB (75.5%)
+===================================================
+Presets specified: ['medium']
+Beginning AutoGluon training ... Time limit = 300s
+AutoGluon will save models to "D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\linearRegression\modelo"
+Train Data Rows:    7992
+Train Data Columns: 11
+Tuning Data Rows:    24
+Tuning Data Columns: 11
+Label Column:       EnergyNormalized
+AutoGluon infers your prediction problem is: 'regression' (because dtype of label-column == float and many unique label-values observed).
+	Label info (max, min, mean, stddev): (0.1517218738549846, 0.005890280091559903, 0.06812, 0.02939)
+	If 'regression' is not the correct problem_type, please manually specify the problem_type parameter during Predictor init (You may specify problem_type as one of: ['binary', 'multiclass', 'regression', 'quantile'])
+Problem Type:       regression
+Preprocessing data ...
+Using Feature Generators to preprocess the data ...
+Fitting AutoMLPipelineFeatureGenerator...
+	Available Memory:                    2617.24 MB
+	Train Data (Original)  Memory Usage: 1.84 MB (0.1% of available memory)
+	Inferring data type of each feature based on column values. Set feature_metadata_in to manually specify special dtypes of the features.
+	Stage 1 Generators:
+		Fitting AsTypeFeatureGenerator...
+			Note: Converting 3 features to boolean dtype as they only contain 2 unique values.
+	Stage 2 Generators:
+		Fitting FillNaFeatureGenerator...
+	Stage 3 Generators:
+		Fitting IdentityFeatureGenerator...
+		Fitting CategoryFeatureGenerator...
+			Fitting CategoryMemoryMinimizeFeatureGenerator...
+	Stage 4 Generators:
+		Fitting DropUniqueFeatureGenerator...
+	Stage 5 Generators:
+		Fitting DropDuplicatesFeatureGenerator...
+	Useless Original Features (Count: 1): ['PopulationDensity']
+		These features carry no predictive signal and should be manually investigated.
+		This is typically a feature which has the same value for all rows.
+		These features do not need to be present at inference time.
+	Types of features in original data (raw dtype, special dtypes):
+		('float', [])  : 1 | ['Temperature']
+		('int', [])    : 6 | ['Hour', 'Day', 'Month', 'Year', 'IsWeekend', ...]
+		('object', []) : 3 | ['TimeOfDay', 'DayOfTheWeek', 'Season']
+	Types of features in processed data (raw dtype, special dtypes):
+		('category', [])  : 3 | ['TimeOfDay', 'DayOfTheWeek', 'Season']
+		('float', [])     : 1 | ['Temperature']
+		('int', [])       : 3 | ['Hour', 'Day', 'Month']
+		('int', ['bool']) : 3 | ['Year', 'IsWeekend', 'IsHoliday']
+	0.1s = Fit runtime
+	10 features in original data used to generate 10 features in processed data.
+	Train Data (Processed) Memory Usage: 0.20 MB (0.0% of available memory)
+Data preprocessing and feature engineering runtime = 0.11s ...
+AutoGluon will gauge predictive performance using evaluation metric: 'mean_absolute_error'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+	To change this, specify the eval_metric parameter of Predictor()
+User-specified model hyperparameters to be fit:
+{
+	'LR': [{}],
+}
+Fitting 1 L1 models, fit_strategy="sequential" ...
+Fitting model: LinearModel ... Training model for up to 299.89s of the 299.88s of remaining time.
+	-0.0128	 = Validation score   (-mean_absolute_error)
+	0.03s	 = Training   runtime
+	0.0s	 = Validation runtime
+Fitting model: WeightedEnsemble_L2 ... Training model for up to 299.89s of the 299.84s of remaining time.
+	Ensemble Weights: {'LinearModel': 1.0}
+	-0.0128	 = Validation score   (-mean_absolute_error)
+	0.01s	 = Training   runtime
+	0.0s	 = Validation runtime
+AutoGluon training complete, total runtime = 0.17s ... Best model: WeightedEnsemble_L2 | Estimated inference throughput: 1024.0 rows/s (24 batch size)
+TabularPredictor saved. To load, use: predictor = TabularPredictor.load("D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\linearRegression\modelo")
+TabularPredictor saved. To load, use: predictor = TabularPredictor.load("D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\linearRegression\modelo")

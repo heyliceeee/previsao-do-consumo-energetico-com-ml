@@ -1,0 +1,446 @@
+Beginning AutoGluon training... Time limit = 3600s
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\LSTM\modelo'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.9
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          12
+GPU Count:          0
+Memory Avail:       4.81 GB / 15.93 GB (30.2%)
+Disk Space Avail:   699.60 GB / 931.46 GB (75.1%)
+===================================================
+Setting presets to: medium_quality
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'h',
+ 'hyperparameters': {'RNNModel': {'dropout': 0.1,
+                                  'epochs': 20,
+                                  'hidden_size': 64,
+                                  'learning_rate': 0.001,
+                                  'module': 'LSTM',
+                                  'num_layers': 2,
+                                  'target_scaler': 'standard'}},
+ 'known_covariates_names': ['Hour', 'TimeOfDay', 'Temperature', 'DayOfTheWeek'],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'EnergyNormalized',
+ 'time_limit': 3600,
+ 'verbosity': 2}
+
+Provided train_data has 7992 rows, 1 time series. Median time series length is 7992 (min=7992, max=7992). 
+Provided tuning_data has 8016 rows, 1 time series. Median time series length is 8016 (min=8016, max=8016). 
+	Setting num_val_windows = 0 (disabling backtesting on train_data) because tuning_data is provided.
+
+Provided data contains following columns:
+	target: 'EnergyNormalized'
+	known_covariates:
+		categorical:        ['TimeOfDay', 'DayOfTheWeek']
+		continuous (float): ['Hour', 'Temperature']
+	past_covariates:
+		categorical:        ['Season']
+		continuous (float): ['ActiveEnergy(kWh)', 'Day', 'Month', 'Year', 'IsWeekend', 'IsHoliday', ...]
+	static_features:
+		categorical:        []
+		continuous (float): ['PopulationDensity']
+
+AutoGluon will ignore following non-numeric/non-informative columns:
+	ignored covariates:      ['Date']
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-04-25 08:50:18
+Warning: path already exists! This predictor may overwrite an existing predictor! path="predicts/LSTM/modelo"
+Beginning AutoGluon training... Time limit = 3600s
+Beginning AutoGluon training... Time limit = 3600s
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\LSTM\modelo'
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\LSTM\modelo'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.9
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          12
+GPU Count:          0
+Memory Avail:       3.77 GB / 15.93 GB (23.7%)
+Disk Space Avail:   699.60 GB / 931.46 GB (75.1%)
+===================================================
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.9
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          12
+GPU Count:          0
+Memory Avail:       3.77 GB / 15.93 GB (23.7%)
+Disk Space Avail:   699.60 GB / 931.46 GB (75.1%)
+===================================================
+Setting presets to: medium_quality
+Setting presets to: medium_quality
+
+Fitting with arguments:
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'h',
+ 'hyperparameters': {'DeepAR': {'context_length': 48,
+                                'dropout': 0.1,
+                                'epochs': 20,
+                                'hidden_size': 64,
+                                'learning_rate': 0.001,
+                                'num_layers': 2,
+                                'target_scaler': 'standard'}},
+ 'known_covariates_names': ['Hour', 'TimeOfDay', 'Temperature', 'DayOfTheWeek'],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'EnergyNormalized',
+ 'time_limit': 3600,
+ 'verbosity': 2}
+
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'h',
+ 'hyperparameters': {'DeepAR': {'context_length': 48,
+                                'dropout': 0.1,
+                                'epochs': 20,
+                                'hidden_size': 64,
+                                'learning_rate': 0.001,
+                                'num_layers': 2,
+                                'target_scaler': 'standard'}},
+ 'known_covariates_names': ['Hour', 'TimeOfDay', 'Temperature', 'DayOfTheWeek'],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'EnergyNormalized',
+ 'time_limit': 3600,
+ 'verbosity': 2}
+
+Provided train_data has 7992 rows, 1 time series. Median time series length is 7992 (min=7992, max=7992). 
+Provided train_data has 7992 rows, 1 time series. Median time series length is 7992 (min=7992, max=7992). 
+Provided tuning_data has 8016 rows, 1 time series. Median time series length is 8016 (min=8016, max=8016). 
+Provided tuning_data has 8016 rows, 1 time series. Median time series length is 8016 (min=8016, max=8016). 
+	Setting num_val_windows = 0 (disabling backtesting on train_data) because tuning_data is provided.
+	Setting num_val_windows = 0 (disabling backtesting on train_data) because tuning_data is provided.
+
+Provided data contains following columns:
+
+Provided data contains following columns:
+	target: 'EnergyNormalized'
+	target: 'EnergyNormalized'
+	known_covariates:
+	known_covariates:
+		categorical:        ['TimeOfDay', 'DayOfTheWeek']
+		categorical:        ['TimeOfDay', 'DayOfTheWeek']
+		continuous (float): ['Hour', 'Temperature']
+		continuous (float): ['Hour', 'Temperature']
+	past_covariates:
+	past_covariates:
+		categorical:        ['Season']
+		categorical:        ['Season']
+		continuous (float): ['ActiveEnergy(kWh)', 'Day', 'Month', 'Year', 'IsWeekend', 'IsHoliday', ...]
+		continuous (float): ['ActiveEnergy(kWh)', 'Day', 'Month', 'Year', 'IsWeekend', 'IsHoliday', ...]
+	static_features:
+	static_features:
+		categorical:        []
+		categorical:        []
+		continuous (float): ['PopulationDensity']
+		continuous (float): ['PopulationDensity']
+
+AutoGluon will ignore following non-numeric/non-informative columns:
+
+AutoGluon will ignore following non-numeric/non-informative columns:
+	ignored covariates:      ['Date']
+	ignored covariates:      ['Date']
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+===================================================
+
+Starting training. Start time is 2025-04-25 08:55:49
+
+Starting training. Start time is 2025-04-25 08:55:49
+Models that will be trained: ['DeepAR']
+Models that will be trained: ['DeepAR']
+Training timeseries model DeepAR. Training for up to 3600.0s of the 3600.0s of remaining time.
+Training timeseries model DeepAR. Training for up to 3600.0s of the 3600.0s of remaining time.
+	-0.0364       = Validation score (-WQL)
+	-0.0364       = Validation score (-WQL)
+	59.89   s     = Training runtime
+	59.89   s     = Training runtime
+	0.12    s     = Validation (prediction) runtime
+	0.12    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['DeepAR']
+Training complete. Models trained: ['DeepAR']
+Total runtime: 60.09 s
+Total runtime: 60.09 s
+Best model: DeepAR
+Best model: DeepAR
+Best model score: -0.0364
+Best model score: -0.0364
+Warning: path already exists! This predictor may overwrite an existing predictor! path="predicts/LSTM/modelo"
+Warning: path already exists! This predictor may overwrite an existing predictor! path="predicts/LSTM/modelo"
+Beginning AutoGluon training... Time limit = 3600s
+Beginning AutoGluon training... Time limit = 3600s
+Beginning AutoGluon training... Time limit = 3600s
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\LSTM\modelo'
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\LSTM\modelo'
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\LSTM\modelo'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.9
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          12
+GPU Count:          0
+Memory Avail:       3.29 GB / 15.93 GB (20.7%)
+Disk Space Avail:   699.60 GB / 931.46 GB (75.1%)
+===================================================
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.9
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          12
+GPU Count:          0
+Memory Avail:       3.29 GB / 15.93 GB (20.7%)
+Disk Space Avail:   699.60 GB / 931.46 GB (75.1%)
+===================================================
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.11.9
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          12
+GPU Count:          0
+Memory Avail:       3.29 GB / 15.93 GB (20.7%)
+Disk Space Avail:   699.60 GB / 931.46 GB (75.1%)
+===================================================
+Setting presets to: medium_quality
+Setting presets to: medium_quality
+Setting presets to: medium_quality
+
+Fitting with arguments:
+
+Fitting with arguments:
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'h',
+ 'hyperparameters': {'DeepAR': {'context_length': 48,
+                                'dropout': 0.1,
+                                'epochs': 20,
+                                'hidden_size': 64,
+                                'learning_rate': 0.001,
+                                'num_layers': 2,
+                                'target_scaler': 'standard'}},
+ 'known_covariates_names': ['Hour', 'TimeOfDay', 'Temperature', 'DayOfTheWeek'],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'EnergyNormalized',
+ 'time_limit': 3600,
+ 'verbosity': 2}
+
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'h',
+ 'hyperparameters': {'DeepAR': {'context_length': 48,
+                                'dropout': 0.1,
+                                'epochs': 20,
+                                'hidden_size': 64,
+                                'learning_rate': 0.001,
+                                'num_layers': 2,
+                                'target_scaler': 'standard'}},
+ 'known_covariates_names': ['Hour', 'TimeOfDay', 'Temperature', 'DayOfTheWeek'],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'EnergyNormalized',
+ 'time_limit': 3600,
+ 'verbosity': 2}
+
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'h',
+ 'hyperparameters': {'DeepAR': {'context_length': 48,
+                                'dropout': 0.1,
+                                'epochs': 20,
+                                'hidden_size': 64,
+                                'learning_rate': 0.001,
+                                'num_layers': 2,
+                                'target_scaler': 'standard'}},
+ 'known_covariates_names': ['Hour', 'TimeOfDay', 'Temperature', 'DayOfTheWeek'],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'EnergyNormalized',
+ 'time_limit': 3600,
+ 'verbosity': 2}
+
+Provided train_data has 7992 rows, 1 time series. Median time series length is 7992 (min=7992, max=7992). 
+Provided train_data has 7992 rows, 1 time series. Median time series length is 7992 (min=7992, max=7992). 
+Provided train_data has 7992 rows, 1 time series. Median time series length is 7992 (min=7992, max=7992). 
+Provided tuning_data has 8016 rows, 1 time series. Median time series length is 8016 (min=8016, max=8016). 
+Provided tuning_data has 8016 rows, 1 time series. Median time series length is 8016 (min=8016, max=8016). 
+Provided tuning_data has 8016 rows, 1 time series. Median time series length is 8016 (min=8016, max=8016). 
+	Setting num_val_windows = 0 (disabling backtesting on train_data) because tuning_data is provided.
+	Setting num_val_windows = 0 (disabling backtesting on train_data) because tuning_data is provided.
+	Setting num_val_windows = 0 (disabling backtesting on train_data) because tuning_data is provided.
+
+Provided data contains following columns:
+
+Provided data contains following columns:
+
+Provided data contains following columns:
+	target: 'EnergyNormalized'
+	target: 'EnergyNormalized'
+	target: 'EnergyNormalized'
+	known_covariates:
+	known_covariates:
+	known_covariates:
+		categorical:        ['TimeOfDay', 'DayOfTheWeek']
+		categorical:        ['TimeOfDay', 'DayOfTheWeek']
+		categorical:        ['TimeOfDay', 'DayOfTheWeek']
+		continuous (float): ['Hour', 'Temperature']
+		continuous (float): ['Hour', 'Temperature']
+		continuous (float): ['Hour', 'Temperature']
+	past_covariates:
+	past_covariates:
+	past_covariates:
+		categorical:        ['Season']
+		categorical:        ['Season']
+		categorical:        ['Season']
+		continuous (float): ['ActiveEnergy(kWh)', 'Day', 'Month', 'Year', 'IsWeekend', 'IsHoliday', ...]
+		continuous (float): ['ActiveEnergy(kWh)', 'Day', 'Month', 'Year', 'IsWeekend', 'IsHoliday', ...]
+		continuous (float): ['ActiveEnergy(kWh)', 'Day', 'Month', 'Year', 'IsWeekend', 'IsHoliday', ...]
+	static_features:
+	static_features:
+	static_features:
+		categorical:        []
+		categorical:        []
+		categorical:        []
+		continuous (float): ['PopulationDensity']
+		continuous (float): ['PopulationDensity']
+		continuous (float): ['PopulationDensity']
+
+AutoGluon will ignore following non-numeric/non-informative columns:
+
+AutoGluon will ignore following non-numeric/non-informative columns:
+
+AutoGluon will ignore following non-numeric/non-informative columns:
+	ignored covariates:      ['Date']
+	ignored covariates:      ['Date']
+	ignored covariates:      ['Date']
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+===================================================
+===================================================
+
+Starting training. Start time is 2025-04-25 08:58:28
+
+Starting training. Start time is 2025-04-25 08:58:28
+
+Starting training. Start time is 2025-04-25 08:58:28
+Models that will be trained: ['DeepAR']
+Models that will be trained: ['DeepAR']
+Models that will be trained: ['DeepAR']
+Training timeseries model DeepAR. Training for up to 3600.0s of the 3600.0s of remaining time.
+Training timeseries model DeepAR. Training for up to 3600.0s of the 3600.0s of remaining time.
+Training timeseries model DeepAR. Training for up to 3600.0s of the 3600.0s of remaining time.
+	Time limit adjusted due to model hyperparameters: 3599.95s -> 3239.95s (ag.max_time_limit=None, ag.max_time_limit_ratio=0.9, ag.min_time_limit=0)
+	Time limit adjusted due to model hyperparameters: 3599.95s -> 3239.95s (ag.max_time_limit=None, ag.max_time_limit_ratio=0.9, ag.min_time_limit=0)
+	Time limit adjusted due to model hyperparameters: 3599.95s -> 3239.95s (ag.max_time_limit=None, ag.max_time_limit_ratio=0.9, ag.min_time_limit=0)
+	-0.0364       = Validation score (-WQL)
+	-0.0364       = Validation score (-WQL)
+	-0.0364       = Validation score (-WQL)
+	34.62   s     = Training runtime
+	34.62   s     = Training runtime
+	34.62   s     = Training runtime
+	0.14    s     = Validation (prediction) runtime
+	0.14    s     = Validation (prediction) runtime
+	0.14    s     = Validation (prediction) runtime
+Not fitting ensemble as only 1 model was trained.
+Not fitting ensemble as only 1 model was trained.
+Not fitting ensemble as only 1 model was trained.
+Training complete. Models trained: ['DeepAR']
+Training complete. Models trained: ['DeepAR']
+Training complete. Models trained: ['DeepAR']
+Total runtime: 34.83 s
+Total runtime: 34.83 s
+Total runtime: 34.83 s
+Best model: DeepAR
+Best model: DeepAR
+Best model: DeepAR
+Best model score: -0.0364
+Best model score: -0.0364
+Best model score: -0.0364
+Model not specified in predict, will default to the model with the best validation score: DeepAR
+Model not specified in predict, will default to the model with the best validation score: DeepAR
+Model not specified in predict, will default to the model with the best validation score: DeepAR
+Model not specified in predict, will default to the model with the best validation score: DeepAR
+Model not specified in predict, will default to the model with the best validation score: DeepAR
+Model not specified in predict, will default to the model with the best validation score: DeepAR

@@ -1,0 +1,472 @@
+Beginning AutoGluon training... Time limit = 3600s
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\CNN\modelo'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.12.10
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          8
+GPU Count:          0
+Memory Avail:       0.55 GB / 7.88 GB (7.0%)
+Disk Space Avail:   886.20 GB / 931.51 GB (95.1%)
+===================================================
+Setting presets to: medium_quality
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'h',
+ 'hyperparameters': {'WaveNet': {}},
+ 'known_covariates_names': ['Hour', 'TimeOfDay', 'Temperature', 'DayOfTheWeek'],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': True,
+ 'target': 'EnergyNormalized',
+ 'time_limit': 3600,
+ 'verbosity': 2}
+
+Provided train_data has 7992 rows, 1 time series. Median time series length is 7992 (min=7992, max=7992). 
+Provided tuning_data has 8016 rows, 1 time series. Median time series length is 8016 (min=8016, max=8016). 
+	Setting num_val_windows = 0 (disabling backtesting on train_data) because tuning_data is provided.
+
+Provided data contains following columns:
+	target: 'EnergyNormalized'
+	known_covariates:
+		categorical:        ['TimeOfDay', 'DayOfTheWeek']
+		continuous (float): ['Hour', 'Temperature']
+	past_covariates:
+		categorical:        ['Season']
+		continuous (float): ['ActiveEnergy(kWh)', 'Day', 'Month', 'Year', 'IsWeekend', 'IsHoliday', ...]
+	static_features:
+		categorical:        []
+		continuous (float): ['PopulationDensity']
+
+AutoGluon will ignore following non-numeric/non-informative columns:
+	ignored covariates:      ['Date']
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2025-04-26 17:25:41
+Models that will be trained: ['WaveNet']
+Training timeseries model WaveNet. Training for up to 3599.6s of the 3599.6s of remaining time.
+	Time limit adjusted due to model hyperparameters: 3599.51s -> 3239.56s (ag.max_time_limit=None, ag.max_time_limit_ratio=0.9, ag.min_time_limit=0)
+	Warning: Exception caused WaveNet to fail during training... Skipping this model.
+	name 'exit' is not defined
+Training complete. Models trained: []
+Total runtime: 133.61 s
+Trainer has no fit models that can predict.
+Warning: path already exists! This predictor may overwrite an existing predictor! path="predicts/CNN/modelo"
+Beginning AutoGluon training... Time limit = 600s
+Beginning AutoGluon training... Time limit = 600s
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\CNN\modelo'
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\CNN\modelo'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.12.10
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          8
+GPU Count:          0
+Memory Avail:       1.13 GB / 7.88 GB (14.4%)
+Disk Space Avail:   886.20 GB / 931.51 GB (95.1%)
+===================================================
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.12.10
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          8
+GPU Count:          0
+Memory Avail:       1.13 GB / 7.88 GB (14.4%)
+Disk Space Avail:   886.20 GB / 931.51 GB (95.1%)
+===================================================
+Setting presets to: medium_quality
+Setting presets to: medium_quality
+
+Fitting with arguments:
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'h',
+ 'hyperparameters': {'WaveNet': {}},
+ 'known_covariates_names': ['Hour', 'TimeOfDay', 'Temperature', 'DayOfTheWeek'],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': True,
+ 'target': 'EnergyNormalized',
+ 'time_limit': 600,
+ 'verbosity': 2}
+
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'h',
+ 'hyperparameters': {'WaveNet': {}},
+ 'known_covariates_names': ['Hour', 'TimeOfDay', 'Temperature', 'DayOfTheWeek'],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': True,
+ 'target': 'EnergyNormalized',
+ 'time_limit': 600,
+ 'verbosity': 2}
+
+Provided train_data has 7992 rows, 1 time series. Median time series length is 7992 (min=7992, max=7992). 
+Provided train_data has 7992 rows, 1 time series. Median time series length is 7992 (min=7992, max=7992). 
+Provided tuning_data has 8016 rows, 1 time series. Median time series length is 8016 (min=8016, max=8016). 
+Provided tuning_data has 8016 rows, 1 time series. Median time series length is 8016 (min=8016, max=8016). 
+	Setting num_val_windows = 0 (disabling backtesting on train_data) because tuning_data is provided.
+	Setting num_val_windows = 0 (disabling backtesting on train_data) because tuning_data is provided.
+
+Provided data contains following columns:
+
+Provided data contains following columns:
+	target: 'EnergyNormalized'
+	target: 'EnergyNormalized'
+	known_covariates:
+	known_covariates:
+		categorical:        ['TimeOfDay', 'DayOfTheWeek']
+		categorical:        ['TimeOfDay', 'DayOfTheWeek']
+		continuous (float): ['Hour', 'Temperature']
+		continuous (float): ['Hour', 'Temperature']
+	past_covariates:
+	past_covariates:
+		categorical:        ['Season']
+		categorical:        ['Season']
+		continuous (float): ['ActiveEnergy(kWh)', 'Day', 'Month', 'Year', 'IsWeekend', 'IsHoliday', ...]
+		continuous (float): ['ActiveEnergy(kWh)', 'Day', 'Month', 'Year', 'IsWeekend', 'IsHoliday', ...]
+	static_features:
+	static_features:
+		categorical:        []
+		categorical:        []
+		continuous (float): ['PopulationDensity']
+		continuous (float): ['PopulationDensity']
+
+AutoGluon will ignore following non-numeric/non-informative columns:
+
+AutoGluon will ignore following non-numeric/non-informative columns:
+	ignored covariates:      ['Date']
+	ignored covariates:      ['Date']
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+===================================================
+
+Starting training. Start time is 2025-04-26 17:27:58
+
+Starting training. Start time is 2025-04-26 17:27:58
+Models that will be trained: ['WaveNet']
+Models that will be trained: ['WaveNet']
+Training timeseries model WaveNet. Training for up to 599.9s of the 599.9s of remaining time.
+Training timeseries model WaveNet. Training for up to 599.9s of the 599.9s of remaining time.
+	Time limit adjusted due to model hyperparameters: 599.89s -> 539.90s (ag.max_time_limit=None, ag.max_time_limit_ratio=0.9, ag.min_time_limit=0)
+	Time limit adjusted due to model hyperparameters: 599.89s -> 539.90s (ag.max_time_limit=None, ag.max_time_limit_ratio=0.9, ag.min_time_limit=0)
+	Warning: Exception caused WaveNet to fail during training... Skipping this model.
+	Warning: Exception caused WaveNet to fail during training... Skipping this model.
+	name 'exit' is not defined
+	name 'exit' is not defined
+Training complete. Models trained: []
+Training complete. Models trained: []
+Total runtime: 107.82 s
+Total runtime: 107.82 s
+Trainer has no fit models that can predict.
+Trainer has no fit models that can predict.
+Warning: path already exists! This predictor may overwrite an existing predictor! path="predicts/CNN/modelo"
+Warning: path already exists! This predictor may overwrite an existing predictor! path="predicts/CNN/modelo"
+Warning: path already exists! This predictor may overwrite an existing predictor! path="predicts/CNN/modelo"
+Warning: path already exists! This predictor may overwrite an existing predictor! path="predicts/CNN/modelo"
+Warning: path already exists! This predictor may overwrite an existing predictor! path="predicts/CNN/modelo"
+Beginning AutoGluon training... Time limit = 600s
+Beginning AutoGluon training... Time limit = 600s
+Beginning AutoGluon training... Time limit = 600s
+Beginning AutoGluon training... Time limit = 600s
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\CNN\modelo'
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\CNN\modelo'
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\CNN\modelo'
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\CNN\modelo'
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.12.10
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          8
+GPU Count:          0
+Memory Avail:       1.11 GB / 7.88 GB (14.1%)
+Disk Space Avail:   886.19 GB / 931.51 GB (95.1%)
+===================================================
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.12.10
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          8
+GPU Count:          0
+Memory Avail:       1.11 GB / 7.88 GB (14.1%)
+Disk Space Avail:   886.19 GB / 931.51 GB (95.1%)
+===================================================
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.12.10
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          8
+GPU Count:          0
+Memory Avail:       1.11 GB / 7.88 GB (14.1%)
+Disk Space Avail:   886.19 GB / 931.51 GB (95.1%)
+===================================================
+=================== System Info ===================
+AutoGluon Version:  1.2
+Python Version:     3.12.10
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26100
+CPU Count:          8
+GPU Count:          0
+Memory Avail:       1.11 GB / 7.88 GB (14.1%)
+Disk Space Avail:   886.19 GB / 931.51 GB (95.1%)
+===================================================
+Setting presets to: medium_quality
+Setting presets to: medium_quality
+Setting presets to: medium_quality
+Setting presets to: medium_quality
+
+Fitting with arguments:
+
+Fitting with arguments:
+
+Fitting with arguments:
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'h',
+ 'hyperparameters': {'WaveNet': {}},
+ 'known_covariates_names': ['Hour', 'TimeOfDay', 'Temperature', 'DayOfTheWeek'],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': True,
+ 'target': 'EnergyNormalized',
+ 'time_limit': 600,
+ 'verbosity': 2}
+
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'h',
+ 'hyperparameters': {'WaveNet': {}},
+ 'known_covariates_names': ['Hour', 'TimeOfDay', 'Temperature', 'DayOfTheWeek'],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': True,
+ 'target': 'EnergyNormalized',
+ 'time_limit': 600,
+ 'verbosity': 2}
+
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'h',
+ 'hyperparameters': {'WaveNet': {}},
+ 'known_covariates_names': ['Hour', 'TimeOfDay', 'Temperature', 'DayOfTheWeek'],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': True,
+ 'target': 'EnergyNormalized',
+ 'time_limit': 600,
+ 'verbosity': 2}
+
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'h',
+ 'hyperparameters': {'WaveNet': {}},
+ 'known_covariates_names': ['Hour', 'TimeOfDay', 'Temperature', 'DayOfTheWeek'],
+ 'num_val_windows': 1,
+ 'prediction_length': 24,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': True,
+ 'target': 'EnergyNormalized',
+ 'time_limit': 600,
+ 'verbosity': 2}
+
+Provided train_data has 7992 rows, 1 time series. Median time series length is 7992 (min=7992, max=7992). 
+Provided train_data has 7992 rows, 1 time series. Median time series length is 7992 (min=7992, max=7992). 
+Provided train_data has 7992 rows, 1 time series. Median time series length is 7992 (min=7992, max=7992). 
+Provided train_data has 7992 rows, 1 time series. Median time series length is 7992 (min=7992, max=7992). 
+Provided tuning_data has 8016 rows, 1 time series. Median time series length is 8016 (min=8016, max=8016). 
+Provided tuning_data has 8016 rows, 1 time series. Median time series length is 8016 (min=8016, max=8016). 
+Provided tuning_data has 8016 rows, 1 time series. Median time series length is 8016 (min=8016, max=8016). 
+Provided tuning_data has 8016 rows, 1 time series. Median time series length is 8016 (min=8016, max=8016). 
+	Setting num_val_windows = 0 (disabling backtesting on train_data) because tuning_data is provided.
+	Setting num_val_windows = 0 (disabling backtesting on train_data) because tuning_data is provided.
+	Setting num_val_windows = 0 (disabling backtesting on train_data) because tuning_data is provided.
+	Setting num_val_windows = 0 (disabling backtesting on train_data) because tuning_data is provided.
+
+Provided data contains following columns:
+
+Provided data contains following columns:
+
+Provided data contains following columns:
+
+Provided data contains following columns:
+	target: 'EnergyNormalized'
+	target: 'EnergyNormalized'
+	target: 'EnergyNormalized'
+	target: 'EnergyNormalized'
+	known_covariates:
+	known_covariates:
+	known_covariates:
+	known_covariates:
+		categorical:        ['TimeOfDay', 'DayOfTheWeek']
+		categorical:        ['TimeOfDay', 'DayOfTheWeek']
+		categorical:        ['TimeOfDay', 'DayOfTheWeek']
+		categorical:        ['TimeOfDay', 'DayOfTheWeek']
+		continuous (float): ['Hour', 'Temperature']
+		continuous (float): ['Hour', 'Temperature']
+		continuous (float): ['Hour', 'Temperature']
+		continuous (float): ['Hour', 'Temperature']
+	past_covariates:
+	past_covariates:
+	past_covariates:
+	past_covariates:
+		categorical:        ['Season']
+		categorical:        ['Season']
+		categorical:        ['Season']
+		categorical:        ['Season']
+		continuous (float): ['ActiveEnergy(kWh)', 'Day', 'Month', 'Year', 'IsWeekend', 'IsHoliday', ...]
+		continuous (float): ['ActiveEnergy(kWh)', 'Day', 'Month', 'Year', 'IsWeekend', 'IsHoliday', ...]
+		continuous (float): ['ActiveEnergy(kWh)', 'Day', 'Month', 'Year', 'IsWeekend', 'IsHoliday', ...]
+		continuous (float): ['ActiveEnergy(kWh)', 'Day', 'Month', 'Year', 'IsWeekend', 'IsHoliday', ...]
+	static_features:
+	static_features:
+	static_features:
+	static_features:
+		categorical:        []
+		categorical:        []
+		categorical:        []
+		categorical:        []
+		continuous (float): ['PopulationDensity']
+		continuous (float): ['PopulationDensity']
+		continuous (float): ['PopulationDensity']
+		continuous (float): ['PopulationDensity']
+
+AutoGluon will ignore following non-numeric/non-informative columns:
+
+AutoGluon will ignore following non-numeric/non-informative columns:
+
+AutoGluon will ignore following non-numeric/non-informative columns:
+
+AutoGluon will ignore following non-numeric/non-informative columns:
+	ignored covariates:      ['Date']
+	ignored covariates:      ['Date']
+	ignored covariates:      ['Date']
+	ignored covariates:      ['Date']
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+===================================================
+===================================================
+===================================================
+
+Starting training. Start time is 2025-04-26 17:30:26
+
+Starting training. Start time is 2025-04-26 17:30:26
+
+Starting training. Start time is 2025-04-26 17:30:26
+
+Starting training. Start time is 2025-04-26 17:30:26
+Models that will be trained: ['WaveNet']
+Models that will be trained: ['WaveNet']
+Models that will be trained: ['WaveNet']
+Models that will be trained: ['WaveNet']
+Training timeseries model WaveNet. Training for up to 599.9s of the 599.9s of remaining time.
+Training timeseries model WaveNet. Training for up to 599.9s of the 599.9s of remaining time.
+Training timeseries model WaveNet. Training for up to 599.9s of the 599.9s of remaining time.
+Training timeseries model WaveNet. Training for up to 599.9s of the 599.9s of remaining time.
+	Time limit adjusted due to model hyperparameters: 599.90s -> 539.91s (ag.max_time_limit=None, ag.max_time_limit_ratio=0.9, ag.min_time_limit=0)
+	Time limit adjusted due to model hyperparameters: 599.90s -> 539.91s (ag.max_time_limit=None, ag.max_time_limit_ratio=0.9, ag.min_time_limit=0)
+	Time limit adjusted due to model hyperparameters: 599.90s -> 539.91s (ag.max_time_limit=None, ag.max_time_limit_ratio=0.9, ag.min_time_limit=0)
+	Time limit adjusted due to model hyperparameters: 599.90s -> 539.91s (ag.max_time_limit=None, ag.max_time_limit_ratio=0.9, ag.min_time_limit=0)
+	277.78  s     = Training runtime
+	277.78  s     = Training runtime
+	277.78  s     = Training runtime
+	277.78  s     = Training runtime
+Training complete. Models trained: ['WaveNet']
+Training complete. Models trained: ['WaveNet']
+Training complete. Models trained: ['WaveNet']
+Training complete. Models trained: ['WaveNet']
+Total runtime: 277.82 s
+Total runtime: 277.82 s
+Total runtime: 277.82 s
+Total runtime: 277.82 s
+Best model: WaveNet
+Best model: WaveNet
+Best model: WaveNet
+Best model: WaveNet
+Model not specified in predict, will default to the model with the best validation score: WaveNet
+Model not specified in predict, will default to the model with the best validation score: WaveNet
+Model not specified in predict, will default to the model with the best validation score: WaveNet
+Model not specified in predict, will default to the model with the best validation score: WaveNet
+Model not specified in predict, will default to the model with the best validation score: WaveNet
+Model not specified in predict, will default to the model with the best validation score: WaveNet
+Model not specified in predict, will default to the model with the best validation score: WaveNet
+Model not specified in predict, will default to the model with the best validation score: WaveNet

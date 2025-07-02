@@ -1177,3 +1177,17 @@ Total runtime: 113.74 s
 Best model: DeepAR
 Best model score: -0.0280
 Model not specified in predict, will default to the model with the best validation score: DeepAR
+Beginning AutoGluon training... Time limit = 3600s
+AutoGluon will save models to 'D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\LSTM_lag\modelo'
+Loading predictor from path D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\LSTM_lag\modelo
+Model not specified in predict, will default to the model with the best validation score: DeepAR
+Loading predictor from path D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\CNN_lag\modelo
+Model not specified in predict, will default to the model with the best validation score: WaveNet
+Loading predictor from path D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\XGBoost_lag\modelo
+Model not specified in predict, will default to the model with the best validation score: DirectTabular
+Loading predictor from path D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\XT_lag\modelo
+Model not specified in predict, will default to the model with the best validation score: DirectTabular
+Loading predictor from path D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\NARX_lag\modelo
+Model not specified in predict, will default to the model with the best validation score: DirectTabular
+Loading predictor from path D:\githubProjects\previsao-do-consumo-energetico-com-ml\predicts\AutoML_lag\modelo
+Model not specified in predict, will default to the model with the best validation score: WeightedEnsemble
